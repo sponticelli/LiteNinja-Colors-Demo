@@ -1,5 +1,21 @@
 {
   "dependencies": {
+    "com.liteninja.colors": {
+      "version": "https://github.com/sponticelli/LiteNinja-Colors.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.liteninja.utils": "1.1.1"
+      },
+      "hash": "85d10b68c03a70e3e535828cff844c7300798ab2"
+    },
+    "com.liteninja.utils": {
+      "version": "https://github.com/sponticelli/LiteNinja-Utils.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "db801be786049a84d470a07b980f651ccf392029"
+    },
     "com.unity.burst": {
       "version": "1.6.5",
       "depth": 1,
@@ -26,7 +42,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.rider": {
-      "version": "3.0.14",
+      "version": "3.0.15",
       "depth": 0,
       "source": "registry",
       "dependencies": {
