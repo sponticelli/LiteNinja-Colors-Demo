@@ -23,3 +23,13 @@ MonoBehaviour:
     - {r: 0.02352935, g: 0.04705876, b: 0.10196072, a: 1}
     - {r: 0.2156862, g: 0.5607843, b: 0.77254903, a: 1}
     - {r: 0, g: 0.16421425, b: 0.41799998, a: 1}
+    _colorNames:
+    - Background
+    - Title Background
+    - Title
+    - Panel Background
+    - Panel Title Background
+    - Panel Title
+    - Panel Text
+    - Panel Button
+    - Panel Button Text
