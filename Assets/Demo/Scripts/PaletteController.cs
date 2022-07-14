@@ -51,6 +51,7 @@ namespace LiteNinja.Colors.Demo
             _colorPreview.color = _color;
 
             AddPalette(_color.RandomHues(_numColors), "Random");
+            AddPalette(_color.Grayscale().RandomShades(_numColors), "Grayscale");
             AddPalette(_color.RandomMonochromaticHarmony(_numColors, 0.5f, 0.01f), "Monochromatic Harmony");
             AddPalette(_color.RandomAnalogousHarmony(_numColors, 60f, 0.01f), "Analogous Harmony");
             AddPalette(_color.RandomComplementaryHarmony(_numColors, 0.25f), "Complementary Harmony");
@@ -74,16 +75,24 @@ namespace LiteNinja.Colors.Demo
         {
             var hsl1 = (ColorHSL)c1;
             var hsl2 = (ColorHSL)c2;
-            var comp = hsl1.Hue.CompareTo(hsl2.Hue);
-            if (comp == 0)
-            {
-                comp = hsl1.Lightness.CompareTo(hsl2.Lightness);
-            }
 
+            var comp = 0;
+            
+            if (Mathf.Approximately(Mathf.RoundToInt(hsl1.Hue/60f), Mathf.RoundToInt(hsl2.Hue/60f)))
+            {
+                comp = hsl1.Hue.CompareTo(hsl2.Hue);
+            }
+            
             if (comp == 0)
             {
                 comp = hsl1.Saturation.CompareTo(hsl2.Saturation);
             }
+            
+            if (comp == 0)
+            {
+                comp = hsl1.Lightness.CompareTo(hsl2.Lightness);
+            }
+            
 
             return comp;
         }
